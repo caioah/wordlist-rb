@@ -3,7 +3,7 @@ Custom wordlist generator written in Ruby
 # Usage
 Initialization
 --------------
-syntax: Wordlist.new(<opt>, <custom>)
+syntax: Wordlist.new(opt, custom)
 
 * opt: 4-bit integer comoposed of 4 flags, wether lowercase, uppercase, numeric or other.
 * custom: string of custom characters to be included. (optional)

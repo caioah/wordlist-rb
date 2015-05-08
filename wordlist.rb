@@ -20,7 +20,7 @@ class Wordlist
     end
     def fixed(n,&b)
         @alphabet.chars.repeated_permutation(n).map{|x| 
-            ((not b.nil?) ? b.call(tmp) : x.join)}
+            (b.nil? ? x.join : b.call(tmp))}
     end
     def variable(s,e,&b)
         return nil if s <= 0
@@ -48,12 +48,12 @@ class Wordlist
             if mask.length > 1
                 a = masked(mask[1..-1],cust)
                 (a.empty? ? 
-                    ((not b.nil?) ? b.call(x) : x) : 
+                    (b.nil? ? x : b.call(x)) : 
                     a.map{|y| 
                         w = x+y
-                        ((not b.nil?) ? b.call(w) : w)})
+                        (b.nil? ? w : b.call(w))})
             else 
-                ((not b.nil?) ? b.call(x) : x)
+                (b.nil? ? x : b.call(x))
             end}.flatten   
     end
 end

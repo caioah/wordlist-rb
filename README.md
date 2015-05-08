@@ -17,17 +17,16 @@ They are defined by the constants:
 
 Each can be used by itself or they can be combined with the "|" (OR) or "+" (sum) operator. 
 For example, to include alphanumeric lowercase and uppercase, you can use either
-
+```ruby
 Wordlist.new(AlphaLow|AlphaUp|Numbers) 
-
+```
 or
-
+```ruby
 Wordlist.new(AlphaLow+AlphaUp+Numbers).
-
+```
 They can also be represented by their resulting integer. The previous example would be the same as Wordlist.new(7).
 
 If no opt is specified, the default lowercase will be used.
-
 ```ruby
 alphabetic = Wordlist.new(AlphaLow)
 alphabetic = Wordlist.new(AlphaLow|AlphaUp)

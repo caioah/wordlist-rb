@@ -46,11 +46,11 @@ The class has 3 wordlist generating functions:
 
 The mask parameter is an string composed of 5 characters that identify the character set to be included. 
 The characters are:
-* "a" = lowercase
-* "A" = uppercase
-* "#" = numeric
-* "@" = other
-* "*" = custom
+* a = lowercase
+* A = uppercase
+* # = numeric
+* @ = other
+* * = custom
 
 The mask parameter overrides current flags if masked is called from an instantiated class. The function masked can also be called from an uninstantiated class like Wordlist.masked(mask,custom), where custom is an string with custom characters to be included.
 

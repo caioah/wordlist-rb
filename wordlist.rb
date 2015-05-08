@@ -7,7 +7,7 @@ AlphaUp = 2
 Numbers = 4
 Others = 8
 class Wordlist
-    attr_accessor :alpha, :upcase, :num, :other, :custom, :length, :alphabet
+    attr_accessor :alpha, :upcase, :num, :other, :custom, :alphabet
     def initialize(opt = 1, cus = "")
         @alpha,@upcase,@num,@other = [AlphaLow,AlphaUp,Numbers,Others].map{|x| (opt & x) == x}
         @custom = cus

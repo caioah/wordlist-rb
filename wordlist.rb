@@ -42,7 +42,7 @@ class Wordlist
             when "*" then cus
             else raise "Invalid mask: #{mask[0]}"
         end
-        return masked(mask[1..-1],cus,&b) if tmp.empty?
+        return masked(mask[1..-1],cus,&b) if tmp.empty? and mask.length > 1
         tmp.chars.map{|x| 
             if mask.length > 1
                 masked(mask[1..-1],cus).map{|y| 

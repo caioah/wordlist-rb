@@ -22,7 +22,7 @@ Wordlist.new(AlphaLow|AlphaUp|Numbers)
 ```
 or
 ```ruby
-Wordlist.new(AlphaLow+AlphaUp+Numbers).
+Wordlist.new(AlphaLow+AlphaUp+Numbers)
 ```
 They can also be represented by their resulting integer. The previous example would be the same as Wordlist.new(7).
 

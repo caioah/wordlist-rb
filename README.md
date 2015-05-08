@@ -61,5 +61,7 @@ Wordlist.new(6).variable(1,5) #generates an array of 1 to 5 alphanumeric upperca
 Wordlist.new(7).variable(3,3) #same as Wordlist.new(7).fixed(3)
 Wordlist.masked("A#*a", "!@#$") #generates an array with words in the mask "A#*a", i.e. from "A0!a" to "Z9$z"
 Wordlist.new.masked("aa"){|w| puts w} #generates lowercase words of 2 letters and prints each on stdout. 
-                                         #same as Wordlist.new.fixed(2){|w| puts w}
+                                      #same as Wordlist.new.fixed(2){|w| puts w}
+Wordlist.new(Numbers).fixed(2) #generates an array of strings counting from "00" to "99" 
+                               #same as Array.new(100){|x| x.to_s}
 ```

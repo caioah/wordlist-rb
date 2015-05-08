@@ -60,6 +60,6 @@ Wordlist.new(5).fixed(4) #generates an array of 4 alphanumeric lowercase charact
 Wordlist.new(6).variable(1,5) #generates an array of 1 to 5 alphanumeric uppercase characters
 Wordlist.new(7).variable(3,3) #same as Wordlist.new(7).fixed(3)
 Wordlist.masked("A#*a", "!@#$") #generates an array with words in the mask "A#*a", i.e. from "A0!a" to "Z9$z"
-Wordlist.new(1).masked("aa"){|w| puts w} #generates lowercase words of 2 letters and prints each on stdout. 
-                                         #same as Wordlist.new(1).fixed(2){|w| puts w}
+Wordlist.new.masked("aa"){|w| puts w} #generates lowercase words of 2 letters and prints each on stdout. 
+                                         #same as Wordlist.new.fixed(2){|w| puts w}
 ```

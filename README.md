@@ -58,6 +58,6 @@ A block of code with a parameter can be passed to each function. It will be exec
 ```ruby
 Wordlist.new(5).fixed(4) #generates an array of 4 alphanumeric lowercase characters
 Wordlist.new(6).variable(1,5) #generates an array of 1 to 5 alphanumeric uppercase characters
-Wordlist.masked("A#*a*", "!@#$") #generates an array with words in the mask "A#*a", i.e. from "A0!a" to "Z9$z"
+Wordlist.masked("A#*a", "!@#$") #generates an array with words in the mask "A#*a", i.e. from "A0!a" to "Z9$z"
 Wordlist.new(1).fixed(2){|w| puts w} #generates lowercase words of 2 letters and prints each on stdout 
 ```

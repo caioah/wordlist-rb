@@ -51,6 +51,7 @@ The characters are:
 * "#" = numeric
 * "@" = other
 * "*" = custom
+
 The mask parameter overrides current flags if masked is called from an instantiated class. The function masked can also be called from an uninstantiated class like Wordlist.masked(mask,custom), where custom is an string with custom characters to be included.
 
 A block of code with a parameter can be passed to each function. It will be executed with every generated word as parameter.

@@ -19,7 +19,7 @@ class Wordlist
             ).join
     end
     def fixed(n,&b)
-        @alphabet.chars.repeated_permutation(n).map{|x| 
+        @alphabet.chars.repeated_permutation(n){|x| 
             tmp = x.join
             (b.nil? ? tmp : b.call(tmp))}
     end

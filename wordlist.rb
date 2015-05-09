@@ -20,7 +20,8 @@ class Wordlist
     end
     def fixed(n,&b)
         @alphabet.chars.repeated_permutation(n).map{|x| 
-            (b.nil? ? x.join : b.call(tmp))}
+            tmp = x.join
+            (b.nil? ? tmp : b.call(tmp))}
     end
     def variable(s,e,&b)
         return nil if s <= 0
